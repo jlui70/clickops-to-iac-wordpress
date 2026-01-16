@@ -1,0 +1,9 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "wp-docker"
+vpc_cidr     = "10.0.0.0/16"
+
+# Database credentials (CHANGE THESE!)
+db_username = "admin"
+db_password = "CHANGE_ME_STRONG_PASSWORD"
+db_name     = "wordpressdb"
