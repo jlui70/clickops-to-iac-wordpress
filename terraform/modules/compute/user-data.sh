@@ -55,6 +55,6 @@ services:
 EOL
 
 # Inicializar o container do WordPress com Docker Compose
-sudo -u ec2-user bash -c "cd /home/ec2-user && docker-compose -f docker-compose.yaml up -d"
+sudo -u ec2-user bash -c "cd /home/ec2-user && /usr/local/bin/docker-compose -f docker-compose.yaml up -d"
 
 echo "Instalação concluída! WordPress está rodando e conectado ao RDS."

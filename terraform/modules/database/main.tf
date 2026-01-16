@@ -13,7 +13,7 @@ resource "aws_db_subnet_group" "main" {
 resource "aws_db_instance" "wordpress" {
   identifier     = "${var.project_name}db"
   engine         = "mysql"
-  engine_version = "8.0.35"
+  engine_version = "8.0.44"
   instance_class = "db.t3.micro"
 
   allocated_storage     = 20
@@ -30,13 +30,13 @@ resource "aws_db_instance" "wordpress" {
 
   publicly_accessible = false
   skip_final_snapshot = true
-  
+
   backup_retention_period = 0
-  
+
   # Performance
-  multi_az               = false
-  deletion_protection    = false
-  
+  multi_az            = false
+  deletion_protection = false
+
   # Manutenção
   auto_minor_version_upgrade = true
   maintenance_window         = "sun:03:00-sun:04:00"
