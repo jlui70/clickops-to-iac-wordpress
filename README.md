@@ -11,23 +11,14 @@ Comparar de forma objetiva e prática duas abordagens:
 
 ---
 
-## 📚 Documentação
-
-### 🚀 Por Onde Começar?
-
-1. **[RESUMO-EXECUTIVO.md](RESUMO-EXECUTIVO.md)** - Leia primeiro! Visão geral completa
-2. **[PLANEJAMENTO.md](PLANEJAMENTO.md)** - Planejamento estratégico e roadmap
-3. **[CHECKLIST-COMPLETO.md](CHECKLIST-COMPLETO.md)** - Checklist executável detalhado
-4. **[GUIA-RAPIDO.md](GUIA-RAPIDO.md)** - Comandos práticos
-5. **[EXEMPLO-MODULO-TERRAFORM.md](EXEMPLO-MODULO-TERRAFORM.md)** - Código Terraform
-6. **[COMPARACAO-TEMPLATE.md](COMPARACAO-TEMPLATE.md)** - Template de análise
-7. **[INDICE.md](INDICE.md)** - Índice completo
-
----
-
 ## **Arquitetura**
 
-### 📊 Diagrama da Infraestrutura (Terraform IaC)
+### 📊 Diagrama da Infraestrutura Terraform (IaC)
+
+![Arquitetura Terraform IaC](./img/arquitetura-terraform-iac.png)
+
+<details>
+<summary>📝 Clique para ver o código Mermaid (para editar)</summary>
 
 ```mermaid
 graph TB
@@ -142,11 +133,12 @@ graph TB
     class SG_ALB,SG_APP,SG_DB,SG_EFS,IAM security
 ```
 
+</details>
+
 ### 🔄 ClickOps vs Terraform
 
 | Aspecto | ClickOps (Manual) | Terraform (IaC) |
 |---------|-------------------|-----------------|
-| **Diagrama Original** | ![ClickOps](./img/arquitetura-diagrama.png) | Diagrama Mermaid acima |
 | **Método** | Console AWS (cliques) | Código declarativo |
 | **Tempo de Deploy** | ~45-60 minutos | ~10-15 minutos |
 | **Reprodutibilidade** | ❌ Manual, sujeito a erros | ✅ Automatizado e consistente |
@@ -281,21 +273,6 @@ Ao final, você receberá:
 **Total estimado**: $2-3/dia durante testes
 
 ⚠️ **IMPORTANTE**: Configure billing alerts e execute `./destroy.sh` quando não estiver usando!
-
----
-
-## 📂 Estrutura
-
-```
-.
-├── clickops/              # Guia ClickOps manual
-├── terraform/             # Código IaC
-│   ├── modules/          # 7 módulos Terraform
-│   └── environments/     # dev/prod
-├── ansible/              # Playbook original
-├── docs/                 # Documentação adicional
-└── *.md                  # Guias e planejamento
-```
 
 ---
 
