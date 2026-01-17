@@ -1,16 +1,49 @@
 # WordPress na AWS: ClickOps vs Infrastructure as Code (Terraform)
 
+> **Demonstração prática da transição de ClickOps para IaC** com Terraform, implementando arquitetura WordPress escalável e altamente disponível na AWS.
+
+[![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4?style=flat-square&logo=terraform)](https://www.terraform.io/)
+[![AWS](https://img.shields.io/badge/Cloud-AWS-FF9900?style=flat-square&logo=amazon-aws)](https://aws.amazon.com/)
+[![WordPress](https://img.shields.io/badge/CMS-WordPress-21759B?style=flat-square&logo=wordpress)](https://wordpress.org/)
+[![Docker](https://img.shields.io/badge/Container-Docker-2496ED?style=flat-square&logo=docker)](https://www.docker.com/)
+[![MySQL](https://img.shields.io/badge/Database-MySQL_8.0-4479A1?style=flat-square&logo=mysql)](https://www.mysql.com/)
+[![Ansible](https://img.shields.io/badge/Config-Ansible-EE0000?style=flat-square&logo=ansible)](https://www.ansible.com/)
+
+---
+
 ## 🎯 Sobre Este Projeto
 
 Este projeto demonstra a **transição de infraestrutura manual (ClickOps) para Infrastructure as Code (IaC)** usando Terraform, através da implementação da mesma arquitetura WordPress escalável na AWS.
 
 ### Objetivo
 Comparar de forma objetiva e prática duas abordagens:
-- ☁️ **ClickOps**: Configuração manual via AWS Console
+
+- ☁️ **ClickOps**: Configuração manual via AWS Console 
+https://github.com/jlui70/clickops-aws-wordpress
+
 - 🔧 **Terraform**: Automação completa via código
 
 ---
+### 🔄 ClickOps vs Terraform
 
+| Aspecto | ClickOps (Manual) | Terraform (IaC) |
+|---------|-------------------|-----------------|
+| **Método** | Console AWS (cliques) | Código declarativo |
+| **Tempo de Deploy** | ~45-60 minutos | ~10-15 minutos |
+| **Reprodutibilidade** | ❌ Manual, sujeito a erros | ✅ Automatizado e consistente |
+| **Documentação** | ❌ Screenshots e anotações | ✅ Código autodocumentado |
+| **Versionamento** | ❌ Não versionável | ✅ Git history completo |
+| **Rollback** | ❌ Manual e arriscado | ✅ `terraform destroy` |
+| **Módulos** | ❌ N/A | ✅ 7 módulos reutilizáveis |
+
+---
+### 2. Deploy da Infraestrutura
+
+```bash
+# Deploy automatizado (20-25 min)
+./deploy.sh
+```
+---
 ## **Arquitetura**
 
 ### 📊 Diagrama da Infraestrutura Terraform (IaC)
@@ -135,19 +168,7 @@ graph TB
 
 </details>
 
-### 🔄 ClickOps vs Terraform
 
-| Aspecto | ClickOps (Manual) | Terraform (IaC) |
-|---------|-------------------|-----------------|
-| **Método** | Console AWS (cliques) | Código declarativo |
-| **Tempo de Deploy** | ~45-60 minutos | ~10-15 minutos |
-| **Reprodutibilidade** | ❌ Manual, sujeito a erros | ✅ Automatizado e consistente |
-| **Documentação** | ❌ Screenshots e anotações | ✅ Código autodocumentado |
-| **Versionamento** | ❌ Não versionável | ✅ Git history completo |
-| **Rollback** | ❌ Manual e arriscado | ✅ `terraform destroy` |
-| **Módulos** | ❌ N/A | ✅ 7 módulos reutilizáveis |
-
----
 
 ## 🏗️ Arquitetura a Ser Implementada
 
@@ -275,4 +296,33 @@ Ao final, você receberá:
 ⚠️ **IMPORTANTE**: Configure billing alerts e execute `./destroy.sh` quando não estiver usando!
 
 ---
+## 🗑️ Destruir Infraestrutura
 
+Para evitar custos AWS contínuos:
+
+```bash
+./destroy-all.sh
+```
+
+---
+
+## 📞 Links Úteis
+
+- **Repositório:** https://github.com/jlui70/clickops-to-iac-wordpress
+- **Projeto ClickOps Original:** https://github.com/jlui70/clickops-aws-wordpress
+- **Terraform Docs:** https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+- **AWS Well-Architected:** https://aws.amazon.com/architecture/well-architected/
+- **WordPress on AWS:** https://aws.amazon.com/getting-started/hands-on/launch-a-wordpress-website/
+- **Terraform AWS Modules:** https://registry.terraform.io/namespaces/terraform-aws-modules
+
+---
+
+## 📄 Licença
+
+Este projeto é open source e está disponível sob a [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  <sub>Construído com ❤️ para demonstração de conceitos Infrastructure as Code</sub>
+</p>
