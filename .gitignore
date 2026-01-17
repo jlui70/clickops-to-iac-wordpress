@@ -4,6 +4,8 @@
 *.tfstate.*
 *.tfvars
 !terraform.tfvars.example
+*.tfplan
+tfplan
 crash.log
 override.tf
 override.tf.json
@@ -11,6 +13,7 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+.terraform.lock.hcl
 
 # AWS
 .aws/
@@ -35,3 +38,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Documentation (local only)
+docs/
+deployment-info.txt

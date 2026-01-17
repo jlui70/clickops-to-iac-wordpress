@@ -59,10 +59,10 @@ resource "aws_lb_listener" "http" {
 
 # Auto Scaling Group
 resource "aws_autoscaling_group" "wordpress" {
-  name                = "${var.project_name}-asg"
-  vpc_zone_identifier = var.private_subnet_ids
-  target_group_arns   = [aws_lb_target_group.wordpress.arn]
-  health_check_type   = "ELB"
+  name                      = "${var.project_name}-asg"
+  vpc_zone_identifier       = var.private_subnet_ids
+  target_group_arns         = [aws_lb_target_group.wordpress.arn]
+  health_check_type         = "ELB"
   health_check_grace_period = 300
 
   min_size         = 1

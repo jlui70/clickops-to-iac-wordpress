@@ -37,14 +37,14 @@ module "iam" {
 module "database" {
   source = "./modules/database"
 
-  project_name          = var.project_name
-  environment           = var.environment
-  vpc_id                = module.networking.vpc_id
-  private_subnet_ids    = module.networking.private_subnet_ids
-  db_security_group_id  = module.security_groups.db_sg_id
-  db_name               = var.db_name
-  db_username           = var.db_username
-  db_password           = var.db_password
+  project_name         = var.project_name
+  environment          = var.environment
+  vpc_id               = module.networking.vpc_id
+  private_subnet_ids   = module.networking.private_subnet_ids
+  db_security_group_id = module.security_groups.db_sg_id
+  db_name              = var.db_name
+  db_username          = var.db_username
+  db_password          = var.db_password
 
   depends_on = [module.networking, module.security_groups]
 }
@@ -53,10 +53,10 @@ module "database" {
 module "efs" {
   source = "./modules/efs"
 
-  project_name           = var.project_name
-  environment            = var.environment
-  private_subnet_ids     = module.networking.private_subnet_ids
-  efs_security_group_id  = module.security_groups.efs_sg_id
+  project_name          = var.project_name
+  environment           = var.environment
+  private_subnet_ids    = module.networking.private_subnet_ids
+  efs_security_group_id = module.security_groups.efs_sg_id
 
   depends_on = [module.networking, module.security_groups]
 }
@@ -65,15 +65,15 @@ module "efs" {
 module "compute" {
   source = "./modules/compute"
 
-  project_name           = var.project_name
-  environment            = var.environment
-  app_security_group_id  = module.security_groups.app_sg_id
-  instance_profile_name  = module.iam.instance_profile_name
-  efs_dns_name           = module.efs.efs_dns_name
-  db_endpoint            = module.database.db_address
-  db_name                = var.db_name
-  db_username            = var.db_username
-  db_password            = var.db_password
+  project_name          = var.project_name
+  environment           = var.environment
+  app_security_group_id = module.security_groups.app_sg_id
+  instance_profile_name = module.iam.instance_profile_name
+  efs_dns_name          = module.efs.efs_dns_name
+  db_endpoint           = module.database.db_address
+  db_name               = var.db_name
+  db_username           = var.db_username
+  db_password           = var.db_password
 
   depends_on = [module.efs, module.database, module.iam]
 }
