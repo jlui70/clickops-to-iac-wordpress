@@ -7,7 +7,6 @@
 [![WordPress](https://img.shields.io/badge/CMS-WordPress-21759B?style=flat-square&logo=wordpress)](https://wordpress.org/)
 [![Docker](https://img.shields.io/badge/Container-Docker-2496ED?style=flat-square&logo=docker)](https://www.docker.com/)
 [![MySQL](https://img.shields.io/badge/Database-MySQL_8.0-4479A1?style=flat-square&logo=mysql)](https://www.mysql.com/)
-[![Ansible](https://img.shields.io/badge/Config-Ansible-EE0000?style=flat-square&logo=ansible)](https://www.ansible.com/)
 
 ---
 
@@ -301,7 +300,7 @@ Ao final, você receberá:
 Para evitar custos AWS contínuos:
 
 ```bash
-./destroy-all.sh
+./destroy.sh
 ```
 
 ---
