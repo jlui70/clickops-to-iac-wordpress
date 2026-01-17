@@ -36,12 +36,49 @@ https://github.com/jlui70/clickops-aws-wordpress
 | **Módulos** | ❌ N/A | ✅ 7 módulos reutilizáveis |
 
 ---
-### 2. Deploy da Infraestrutura
+
+## 🚀 Como Usar
+
+### 1. Pré-requisitos
+
+- AWS CLI instalado e configurado
+- Terraform >= 1.0
+- Credenciais AWS com permissões adequadas
+
+### 2. Clone e Configure
 
 ```bash
-# Deploy automatizado (20-25 min)
+# Clone o repositório
+git clone https://github.com/jlui70/clickops-to-iac-wordpress.git
+cd clickops-to-iac-wordpress/
+
+# Configure credenciais AWS
+aws configure
+```
+
+### 3. Configure Variáveis do Terraform
+
+```bash
+cd terraform/
+cp terraform.tfvars.example terraform.tfvars
+# Edite terraform.tfvars com suas configurações (senha do DB, região, etc)
+nano terraform.tfvars
+cd ..
+```
+
+### 4. Deploy da Infraestrutura
+
+```bash
+# Deploy automatizado (~10-15 min)
 ./deploy.sh
 ```
+
+O script executará:
+- `terraform init` - Inicializa providers
+- `terraform validate` - Valida configuração
+- `terraform plan` - Mostra o que será criado
+- `terraform apply` - Cria a infraestrutura (após sua confirmação)
+
 ---
 ## **Arquitetura**
 
