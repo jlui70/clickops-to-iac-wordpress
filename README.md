@@ -10,17 +10,23 @@
 
 ---
 
-## 🎯 Sobre Este Projeto
+## 📋 Sobre o Projeto
 
-Este projeto demonstra a **transição de infraestrutura manual (ClickOps) para Infrastructure as Code (IaC)** usando Terraform, através da implementação da mesma arquitetura WordPress escalável na AWS.
+Este projeto apresenta uma implementação 100% automatizada via Terraform (Infrastructure as Code) de uma arquitetura WordPress escalável e altamente disponível na AWS, demonstrando a evolução e os benefícios da automação de infraestrutura em relação ao processo manual (ClickOps).
 
-### Objetivo
-Comparar de forma objetiva e prática duas abordagens:
+Para automatizar toda a infraestrutura, desenvolvi módulos Terraform reutilizáveis organizados por domínio:
 
-- ☁️ **ClickOps**: Configuração manual via AWS Console 
-https://github.com/jlui70/clickops-aws-wordpress
+🔧 **Terraform** com 7 módulos especializados (Networking, Security Groups, IAM, Database, EFS, Compute, Load Balancing)
+🏗️ **VPC** customizada com subnets públicas/privadas em múltiplas AZs
+🐳 **Docker + WordPress** com deployment automatizado via user-data
+🗄️ **RDS MySQL 8.0** para banco de dados gerenciado
+📁 **EFS** para armazenamento compartilhado persistente
+⚖️ **Application Load Balancer** com Target Groups e health checks
+📈 **Auto Scaling Group** garantindo elasticidade (min: 1, max: 2)
 
-- 🔧 **Terraform**: Automação completa via código
+🎯 **Objetivo**: Demonstrar a superioridade do IaC comparado ao ClickOps manual documentado em [clickops-aws-wordpress](https://github.com/jlui70/clickops-aws-wordpress), evidenciando ganhos em tempo (10-15 min vs 45-60 min), reprodutibilidade, versionamento e manutenibilidade.
+
+✅ **Resultado**: Deploy completamente automatizado, versionado e reproduzível com `terraform apply`, incluindo rollback seguro via `terraform destroy`, eliminando erros manuais e acelerando entregas de infraestrutura.
 
 ---
 ### 🔄 ClickOps vs Terraform
