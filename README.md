@@ -348,23 +348,30 @@ Para evitar custos AWS contínuos:
 
 ---
 
-## 📞 Links Úteis
-
-- **Repositório:** https://github.com/jlui70/clickops-to-iac-wordpress
-- **Projeto ClickOps Original:** https://github.com/jlui70/clickops-aws-wordpress
-- **Terraform Docs:** https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-- **AWS Well-Architected:** https://aws.amazon.com/architecture/well-architected/
-- **WordPress on AWS:** https://aws.amazon.com/getting-started/hands-on/launch-a-wordpress-website/
-- **Terraform AWS Modules:** https://registry.terraform.io/namespaces/terraform-aws-modules
-
----
-
 ## 📄 Licença
 
 Este projeto é open source e está disponível sob a [MIT License](LICENSE).
 
 ---
 
+## 📞 Contato e Suporte
+
+### 🌐 Conecte-se Comigo
+
+- 📹 **YouTube:** [DevOps Project](https://www.youtube.com/@devops-project)
+- 💼 **Portfólio:** [devopsproject.com.br](https://devopsproject.com.br/)
+- 💻 **GitHub:** [@jlui70](https://github.com/jlui70)
+
+### 🌟 Gostou do Projeto?
+
+Se este projeto foi útil para você:
+
+- ⭐ Dê uma **estrela** nos repositórios
+- 🔄 **Compartilhe** com a comunidade
+- 📹 **Inscreva-se** no canal do YouTube
+- 🤝 **Contribua** com melhorias
+
+---
 <p align="center">
   <sub>Construído com ❤️ para demonstração de conceitos Infrastructure as Code</sub>
 </p>
