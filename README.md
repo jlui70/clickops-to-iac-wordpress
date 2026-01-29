@@ -2,6 +2,10 @@
 
 > **Demonstração prática da transição de ClickOps para IaC** com Terraform, implementando arquitetura WordPress escalável e altamente disponível na AWS.
 
+<p align="center">
+  <img src="./img/Diagrama completo clickops-to-iac-wordpress.png" alt="Diagrama de Tecnologias do Projeto" width="800">
+</p>
+
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-623CE4?style=flat-square&logo=terraform)](https://www.terraform.io/)
 [![AWS](https://img.shields.io/badge/Cloud-AWS-FF9900?style=flat-square&logo=amazon-aws)](https://aws.amazon.com/)
 [![WordPress](https://img.shields.io/badge/CMS-WordPress-21759B?style=flat-square&logo=wordpress)](https://wordpress.org/)
